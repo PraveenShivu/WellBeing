@@ -1,7 +1,12 @@
 package Module;
 
-public class kio {
-public static void main(String[] args) {
-	System.out.println("Hello");
-}
+import org.testng.annotations.Test;
+
+public class kio 
+{
+	@Test
+	public void hello()
+	{
+		System.out.println("Hello");
+	}
 }
