@@ -1,7 +1,5 @@
 package com.WellBeing.GenericUtility;
 
-import java.sql.Driver;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -11,12 +9,17 @@ import com.WellBeingObjectRepo.CommonPage;
 import com.WellBeingObjectRepo.LoginPage;
 
 public class BaseClass {
-	ReadDataFromProperty Property=new ReadDataFromProperty();
-	LoginPage Log=new LoginPage(WebDriver driver);
-	CommonPage Com=new CommonPage(WebDriver driver);				
+	public static WebDriver driver;
+	ReadDataFromProperty Property;
+	LoginPage Log;
+	CommonPage Com;
+				
 	@BeforeClass
 	public void Launch()
 	{
+		 Property=new ReadDataFromProperty();
+		 Log=new LoginPage(driver);
+		 Com=new CommonPage(driver);	
 	String Browser = Property.getPropertyData(PropertyFileKeys.BROWSER.getKey());
 	String Url = Property.getPropertyData(PropertyFileKeys.URL.getKey());
 	String Time = Property.getPropertyData(PropertyFileKeys.TIMEOUT.getKey());
@@ -33,7 +36,7 @@ public class BaseClass {
 	@AfterMethod
 	public void Logout()
 	{
-		
+		Com.logOutApp();
 	}
  
 }

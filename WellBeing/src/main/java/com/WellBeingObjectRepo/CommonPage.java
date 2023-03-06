@@ -65,4 +65,9 @@ public class CommonPage {
 	{
 		Report.click();
 	}
+	public void logOutApp()
+	{
+		AdminDropdown.click();
+		SignOut.click();
+	}
 }
