@@ -14,6 +14,7 @@ public class BaseClass {
 	LoginPage Log;
 	CommonPage Com;
 	JavaUtility java;
+	WebdriverUtility wd;
 				
 	@BeforeClass
 	public void Launch()
@@ -22,10 +23,13 @@ public class BaseClass {
 		 Log=new LoginPage(driver);
 		 Com=new CommonPage(driver);
 		 java=new JavaUtility();
+		  wd=new WebdriverUtility();
 	String Browser = Property.getPropertyData(PropertyFileKeys.BROWSER.getKey());
 	String Url = Property.getPropertyData(PropertyFileKeys.URL.getKey());
 	String Time = Property.getPropertyData(PropertyFileKeys.TIMEOUT.getKey());
-	Object timewait = java.stringToAnyDataType(Time, "long");
+	Long timewait = (Long)java.stringToAnyDataType(Time, "long");
+	wd.LaunchApp(Browser, Url);
+	
 	}
 	@BeforeMethod
 	public void Login()
