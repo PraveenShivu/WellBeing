@@ -1,5 +1,6 @@
 package com.WellBeing.admin;
 
-public class EndToEndAdminTest1 {
-
+public class EndToEndAdminTest1 
+{
+	
 }
