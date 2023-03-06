@@ -13,7 +13,7 @@ public class PropertyFetch {
 		FileInputStream fis=new FileInputStream("./src/main/resources/generic_data.properties");
 		Properties prop=new Properties();
 		prop.load(fis);
-		String id = prop.getProperty("url");
+		String id = prop.getProperty("Password");
 		System.out.println(id);
 	}
 }
