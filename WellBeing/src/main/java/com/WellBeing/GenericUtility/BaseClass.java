@@ -13,16 +13,19 @@ public class BaseClass {
 	ReadDataFromProperty Property;
 	LoginPage Log;
 	CommonPage Com;
+	JavaUtility java;
 				
 	@BeforeClass
 	public void Launch()
 	{
 		 Property=new ReadDataFromProperty();
 		 Log=new LoginPage(driver);
-		 Com=new CommonPage(driver);	
+		 Com=new CommonPage(driver);
+		 java=new JavaUtility();
 	String Browser = Property.getPropertyData(PropertyFileKeys.BROWSER.getKey());
 	String Url = Property.getPropertyData(PropertyFileKeys.URL.getKey());
 	String Time = Property.getPropertyData(PropertyFileKeys.TIMEOUT.getKey());
+	Object timewait = java.stringToAnyDataType(Time, "long");
 	}
 	@BeforeMethod
 	public void Login()
