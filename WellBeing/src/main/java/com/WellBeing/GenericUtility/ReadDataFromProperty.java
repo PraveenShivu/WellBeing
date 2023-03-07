@@ -9,10 +9,8 @@ public class ReadDataFromProperty {
 	FileInputStream fisProp;
 	public String getPropertyData(String key) 
 	{
-		
-		try {
 
-			fisProp = new FileInputStream("./WellBeing/src/main/java/com/WellBeing/GenericUtility/PropertyFileKeys.java");
+		try {
 
 			fisProp = new FileInputStream(ConstantPath.PROPERTY_FILE_PATH);
 
@@ -39,8 +37,8 @@ public class ReadDataFromProperty {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
+
+
+
 
 }

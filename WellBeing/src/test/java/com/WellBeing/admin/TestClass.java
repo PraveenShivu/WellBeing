@@ -3,14 +3,12 @@ package com.WellBeing.admin;
 import org.testng.annotations.Test;
 
 import com.WellBeing.GenericUtility.BaseClass;
-import com.WellBeing.GenericUtility.ReadDataFromProperty;
 
-public class TestClass 
+public class TestClass extends BaseClass
 {
 	@Test
 	public void test()
 	{
-		ReadDataFromProperty rd=new ReadDataFromProperty();
-		System.out.println(rd.getPropertyData("url"));
+		System.out.println(driver.getTitle());
 	}
 }

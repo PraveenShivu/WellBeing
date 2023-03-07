@@ -4,8 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
-public class LoginPage {
+
+public class LoginPage   
+{
+	WebDriver driver;
 	@FindBy(xpath = "//select[@id='FacilityId']") private WebElement Facilitydropdown;
 	@FindBy(xpath = "//input[@name='LoginId']") private WebElement idTextField;
 	@FindBy(xpath =  "//input[@name='Password']") private WebElement passwordTextField;
@@ -13,17 +17,15 @@ public class LoginPage {
 
 	public LoginPage(WebDriver driver)
 	{
-		PageFactory.initElements(driver,this);
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+		
 	}
 	public void facilityClick()
 	{
-		Facilitydropdown.click();
+		Select s=new Select(Facilitydropdown);
+		s.selectByIndex(1);
 	}
-	public WebElement dropdown1() 
-	{
-		return Facilitydropdown;
-	}
-
 	public void enterLoginId(String id)
 	{
 		idTextField.sendKeys(id);
