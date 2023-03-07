@@ -35,7 +35,7 @@ public class BaseClass {
 
 		sdriver=driver;
 		driver=wd.LaunchApp(Browser, Url,timeWait);
-
+   
 		Log=new LoginPage(driver);
 		Com=new CommonPage(driver);
 
