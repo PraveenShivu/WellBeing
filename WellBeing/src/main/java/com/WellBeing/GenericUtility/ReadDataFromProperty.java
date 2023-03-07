@@ -11,11 +11,11 @@ public class ReadDataFromProperty {
 	{
 		
 		try {
-<<<<<<< HEAD
+
 			fisProp = new FileInputStream("./WellBeing/src/main/java/com/WellBeing/GenericUtility/PropertyFileKeys.java");
-=======
+
 			fisProp = new FileInputStream(ConstantPath.PROPERTY_FILE_PATH);
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
+
 		} catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
