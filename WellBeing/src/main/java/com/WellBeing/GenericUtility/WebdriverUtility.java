@@ -19,7 +19,7 @@ public class WebdriverUtility {
 	WebDriver driver;
 	public WebDriver LaunchApp(String Browser,String Url)
 	{
-		if(Browser.equals("Chrome")) {
+		if(Browser.equals("chrome")) {
 		WebDriverManager.chromedriver().setup();
 		 driver=new ChromeDriver();
 		}
