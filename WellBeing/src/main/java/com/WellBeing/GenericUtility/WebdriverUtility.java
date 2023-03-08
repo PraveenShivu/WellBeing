@@ -17,6 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebdriverUtility {
 	WebDriver driver;
+	
 	public WebDriver LaunchApp(String Browser,String Url,long time)
 	{
 		driver=null;
@@ -52,18 +53,22 @@ public class WebdriverUtility {
 		WebDriverWait wait2=new WebDriverWait(driver, timeout);
 		wait2.until(ExpectedConditions.invisibilityOf(ele));
 	}
-	public void drop(WebElement ele,String text)
-	{
-		Select s=new Select(ele);
-		s.selectByVisibleText(text);
 
-	}
-	public void drop1(WebElement ele)
-	{
-		Select s=new Select(ele);
-		s.selectByValue("1");
+public void drop(WebElement ele,String text)
+{
+	Select s=new Select(ele);
+	s.selectByIndex(1);
+	
+}
+public void drop1(WebElement ele)
+{
+	Select s=new Select(ele);
+	s.selectByValue("1");
+	
+}
 
-	}
+
+	
 
 	public void KeyBoard() throws AWTException
 	{

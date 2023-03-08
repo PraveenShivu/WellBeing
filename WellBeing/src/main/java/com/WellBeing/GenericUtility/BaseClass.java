@@ -10,8 +10,12 @@ import com.WellBeingObjectRepo.CommonPage;
 import com.WellBeingObjectRepo.LoginPage;
 
 public class BaseClass {
-	public  WebDriver driver;
-	public static WebDriver sdriver;
+
+	protected  WebDriver driver;
+	public  WebDriver sdriver;
+
+	
+
 	protected ReadDataFromProperty Property;
 	protected LoginPage Log;
 	protected CommonPage Com;
@@ -33,9 +37,13 @@ public class BaseClass {
 		String Time = Property.getPropertyData(PropertyFileKeys.TIMEOUT.getKey());
 		Long timeWait = (Long)java.stringToAnyDataType(Time, "long");
 
+		
+
+
 		sdriver=driver;
 		driver=wd.LaunchApp(Browser, Url,timeWait);
    
+
 		
 		
 		Log=new LoginPage(driver);
@@ -44,12 +52,24 @@ public class BaseClass {
 	}
 	@BeforeMethod
 	public void Login()
-	{
-		String option = Property.getPropertyData(PropertyFileKeys.OPTION.getKey());
-		String Id = Property.getPropertyData(PropertyFileKeys.LOGINID.getKey());
-		String Password = Property.getPropertyData(PropertyFileKeys.PASSWORD.getKey());
+	{ 
 		
+		LoginPage log =new LoginPage(driver);
+		String option = Property.getPropertyData(PropertyFileKeys.OPTION.getKey());
+		System.out.println(option);
+		String Id = Property.getPropertyData(PropertyFileKeys.LOGINID.getKey());
+		System.out.println(Id);
+		String Password = Property.getPropertyData(PropertyFileKeys.PASSWORD.getKey());
+
+
+		System.out.println(Password);
+
+
+		
+		
+
 		Log.facilityClick();
+
 		Log.enterLoginId(Id);
 		Log.pwd(Password);
 		Log.signButton();
