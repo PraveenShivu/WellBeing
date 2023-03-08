@@ -61,6 +61,7 @@ public class BaseClass {
 		System.out.println(Id);
 		String Password = Property.getPropertyData(PropertyFileKeys.PASSWORD.getKey());
 
+
 		System.out.println(Password);
 
 
@@ -77,10 +78,11 @@ public class BaseClass {
 	@AfterMethod
 	public void Logout()
 	{
-		Com.logOutApp();
-		WebElement w1 = Com.returnLog();
-		wd.waitTillVisible(w1);
-		Com.LogOut();
+		driver.quit();
+//		Com.logOutApp();
+//		WebElement w1 = Com.returnLog();
+//		wd.waitTillVisible(w1);
+//		Com.LogOut();
 	}
 
 }
