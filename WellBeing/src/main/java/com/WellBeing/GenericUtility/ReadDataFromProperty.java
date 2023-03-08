@@ -12,8 +12,6 @@ public class ReadDataFromProperty {
 		
 		try {
 
-			fisProp = new FileInputStream("./WellBeing/src/main/java/com/WellBeing/GenericUtility/PropertyFileKeys.java");
-
 			fisProp = new FileInputStream(ConstantPath.PROPERTY_FILE_PATH);
 
 		} catch (FileNotFoundException e1) {

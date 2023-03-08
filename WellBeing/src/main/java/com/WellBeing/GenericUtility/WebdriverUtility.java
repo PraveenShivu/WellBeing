@@ -17,6 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebdriverUtility {
 	WebDriver driver;
+	
 	public WebDriver LaunchApp(String Browser,String Url,long time)
 	{
 		if(Browser.equals("chrome")) {
@@ -54,7 +55,7 @@ public class WebdriverUtility {
 public void drop(WebElement ele,String text)
 {
 	Select s=new Select(ele);
-	s.selectByVisibleText(text);
+	s.selectByIndex(1);
 	
 }
 public void drop1(WebElement ele)
