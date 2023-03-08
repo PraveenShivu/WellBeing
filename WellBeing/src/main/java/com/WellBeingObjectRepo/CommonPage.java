@@ -67,7 +67,14 @@ public class CommonPage {
 	}
 	public void logOutApp()
 	{
-		AdminDropdown.click();
+		AdminDropdown.click();		
+	}
+	public WebElement returnLog()
+	{
+		return SignOut;
+	}
+	public void LogOut()
+	{
 		SignOut.click();
 	}
 }
