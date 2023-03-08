@@ -14,12 +14,17 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.testng.annotations.Test;
 
 import com.WellBeing.GenericUtility.BaseClass;
+import com.WellBeing.GenericUtility.ReadDataFromExcel;
 
-public class CreatePatientWithAdminTest1
+public class CreatePatientWithAdminTest1 
 {
 	@Test
 	public void createPatientTest() throws EncryptedDocumentException, InvalidFormatException, IOException
 	{
+		
+		ReadDataFromExcel read=new ReadDataFromExcel();
+		
+		read.getLastRowNum()
 		FileInputStream fis=new FileInputStream("C:\\Users\\shiva\\OneDrive\\Desktop\\testdata.xlsx");
 		Workbook book = WorkbookFactory.create(fis);
 		Sheet sheet = book.getSheet("Patient Registration");
