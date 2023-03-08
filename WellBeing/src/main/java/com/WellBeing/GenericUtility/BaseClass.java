@@ -12,10 +12,13 @@ public class BaseClass {
 
 	protected  WebDriver driver;
 	public  WebDriver sdriver;
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 	protected ReadDataFromProperty Property;
 	protected LoginPage Log;
 	protected CommonPage Com;
@@ -23,27 +26,31 @@ public class BaseClass {
 	protected WebdriverUtility wd;
 	protected ReadDataFromExcel exl;
 
-
-
 	@BeforeClass
 	public void Launch()
 	{
 		Property=new ReadDataFromProperty();
 		java=new JavaUtility();
-
 		wd=new WebdriverUtility();
 		exl=new ReadDataFromExcel();
+
+		Log=new LoginPage(driver);
+		Com=new CommonPage(driver);
 
 		String Browser = Property.getPropertyData(PropertyFileKeys.BROWSER.getKey());
 		String Url = Property.getPropertyData(PropertyFileKeys.URL.getKey());
 		String Time = Property.getPropertyData(PropertyFileKeys.TIMEOUT.getKey());
 		Long timeWait = (Long)java.stringToAnyDataType(Time, "long");
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 		sdriver=driver;
 		driver=wd.LaunchApp(Browser, Url,timeWait);
+<<<<<<< HEAD
 
 		Log=new LoginPage(driver);
 
@@ -55,11 +62,18 @@ public class BaseClass {
 
 		Com=new CommonPage(driver);
 
+=======
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 	}
+
 	@BeforeMethod
 	public void Login()
+<<<<<<< HEAD
 	{ 
 
+=======
+	{ 		
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 		LoginPage log =new LoginPage(driver);
 		String option = Property.getPropertyData(PropertyFileKeys.OPTION.getKey());
 		System.out.println(option);
@@ -67,6 +81,7 @@ public class BaseClass {
 		System.out.println(Id);
 		String Password = Property.getPropertyData(PropertyFileKeys.PASSWORD.getKey());
 
+<<<<<<< HEAD
 
 		System.out.println(Password);
 
@@ -74,8 +89,9 @@ public class BaseClass {
 
 
 
+=======
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 		Log.facilityClick();
-
 		Log.enterLoginId(Id);
 		Log.pwd(Password);
 		Log.signButton();

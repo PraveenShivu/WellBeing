@@ -7,8 +7,7 @@ public class JavaUtility {
 		Object convertedData=null;
 		if(stratgy.equals("int"))
 		{
-			convertedData=Integer.parseInt(s);
-			
+			convertedData=Integer.parseInt(s);			
 		}
 		else if(stratgy.equals("long"))
 		{
