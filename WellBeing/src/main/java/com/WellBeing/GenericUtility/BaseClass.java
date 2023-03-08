@@ -37,7 +37,7 @@ public class BaseClass {
 		String Time = Property.getPropertyData(PropertyFileKeys.TIMEOUT.getKey());
 		Long timeWait = (Long)java.stringToAnyDataType(Time, "long");
 
-		driver=wd.LaunchApp(Browser, Url,timeWait);
+		
 
 
 		sdriver=driver;
