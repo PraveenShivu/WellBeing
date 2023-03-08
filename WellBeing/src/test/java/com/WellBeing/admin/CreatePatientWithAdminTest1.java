@@ -20,11 +20,11 @@ public class CreatePatientWithAdminTest1
 	@Test
 	public void createPatientTest() throws EncryptedDocumentException, InvalidFormatException, IOException
 	{
-		FileInputStream fis=new FileInputStream("C:\\Users\\shiva\\OneDrive\\Desktop\\testdata.xlsx");
+		FileInputStream fis=new FileInputStream("./src/test/resources/testdata.xlsx");
 		Workbook book = WorkbookFactory.create(fis);
 		Sheet sheet = book.getSheet("Patient Registration");
 		Row row = sheet.getRow(2);
-		Cell cel = row.getCell(2);
+		Cell cel = row.getCell(3);
 		String val = cel.getStringCellValue();
 		System.out.println(val);
 		

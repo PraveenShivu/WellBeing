@@ -1,7 +1,6 @@
 package com.WellBeing.GenericUtility;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -16,11 +15,12 @@ public class BaseClass {
 
 	
 
-	protected ReadDataFromProperty Property;
+    protected ReadDataFromProperty Property;
 	protected LoginPage Log;
 	protected CommonPage Com;
 	protected JavaUtility java;
 	protected WebdriverUtility wd;
+	protected ReadDataFromExcel exl;
 
 
 
@@ -31,6 +31,7 @@ public class BaseClass {
 		java=new JavaUtility();
 
 		wd=new WebdriverUtility();
+		exl=new ReadDataFromExcel();
 
 		String Browser = Property.getPropertyData(PropertyFileKeys.BROWSER.getKey());
 		String Url = Property.getPropertyData(PropertyFileKeys.URL.getKey());
@@ -42,11 +43,7 @@ public class BaseClass {
 
 		sdriver=driver;
 		driver=wd.LaunchApp(Browser, Url,timeWait);
-   
-
-		
-		
-		Log=new LoginPage(driver);
+        Log=new LoginPage(driver);
 		Com=new CommonPage(driver);
 
 	}
