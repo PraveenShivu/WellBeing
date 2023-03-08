@@ -14,8 +14,13 @@ public class BaseClass {
 	public  WebDriver sdriver;
 
 	
+<<<<<<< HEAD
 
     protected ReadDataFromProperty Property;
+=======
+
+	protected ReadDataFromProperty Property;
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 	protected LoginPage Log;
 	protected CommonPage Com;
 	protected JavaUtility java;
@@ -43,7 +48,15 @@ public class BaseClass {
 
 		sdriver=driver;
 		driver=wd.LaunchApp(Browser, Url,timeWait);
+<<<<<<< HEAD
         Log=new LoginPage(driver);
+=======
+   
+
+		
+		
+		Log=new LoginPage(driver);
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 		Com=new CommonPage(driver);
 
 	}

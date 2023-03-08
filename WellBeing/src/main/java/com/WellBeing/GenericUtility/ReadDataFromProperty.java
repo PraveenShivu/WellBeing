@@ -12,9 +12,6 @@ public class ReadDataFromProperty {
 
 		try {
 
-
-
-
 			fisProp = new FileInputStream(ConstantPath.PROPERTY_FILE_PATH);
 
 		} catch (FileNotFoundException e1) {
