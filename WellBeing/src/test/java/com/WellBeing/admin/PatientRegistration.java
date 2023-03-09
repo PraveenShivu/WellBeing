@@ -76,7 +76,6 @@ public class PatientRegistration extends BaseClass
 		patient.title(4);
 		patient.firstName(actKey2+randomNumber);
 		patient.lastName(actKey3+randomNumber);
-		//Thread.sleep(3000);
 		patient.Gender(actKey4);
 		patient.Num(actKey6);
 		patient.But();
@@ -85,16 +84,17 @@ public class PatientRegistration extends BaseClass
 		String uId = patient.getUhid();
 		String gntdId = java.getId(uId);
 		Com.identityClick();
-		//Thread.sleep(5000);
 		idntmgt.encounterCreationButton();
+		//Thread.sleep(5000);
 		ecCreate.ecreation();
-		ecCreate.Uhid(gntdId);
+		//Thread.sleep(5000);
+		ecCreate.Uhid(gntdId);	
 		wd.KeyBoard();
 		ecCreate.Search();
 		ecCreate.COH();
 		ecCreate.patientTypeDpdn("Ambulatory Patient");
 		ecCreate.deptDpdn("General Medicine");
-		ecCreate.providerDpdn("OGHENEFEJIRO  OGHI");
+		ecCreate.providerDpdn("OGHENEFEJIRO OGHI");
 		ecCreate.locDpdn("General Medicine Clinic");
 		ecCreate.saveButton();
 		String gntdEid = ecCreate.getEid();
