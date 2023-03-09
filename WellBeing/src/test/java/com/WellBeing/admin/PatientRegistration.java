@@ -85,14 +85,16 @@ public class PatientRegistration extends BaseClass
 		String gntdId = java.getId(uId);
 		Com.identityClick();
 		idntmgt.encounterCreationButton();
-		//Thread.sleep(5000);
+		wd.sleep();
 		ecCreate.ecreation();
-		//Thread.sleep(5000);
+		wd.sleep();
 		ecCreate.Uhid(gntdId);	
 		wd.KeyBoard();
 		ecCreate.Search();
+		wd.sleep();
 		ecCreate.COH();
 		ecCreate.patientTypeDpdn("Ambulatory Patient");
+		wd.sleep();
 		ecCreate.deptDpdn("General Medicine");
 		ecCreate.providerDpdn("OGHENEFEJIRO OGHI");
 		ecCreate.locDpdn("General Medicine Clinic");

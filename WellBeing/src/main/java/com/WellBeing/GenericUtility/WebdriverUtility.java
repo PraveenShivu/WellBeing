@@ -53,6 +53,7 @@ public class WebdriverUtility {
 	{
 		WebDriverWait wait2=new WebDriverWait(driver, timeout);
 		wait2.until(ExpectedConditions.invisibilityOf(ele));
+		
 	}
 
 	public void drop(WebElement ele,String text)
@@ -80,6 +81,15 @@ public class WebdriverUtility {
 		rt.keyRelease(KeyEvent.VK_DOWN);
 		rt.keyPress(KeyEvent.VK_ENTER);
 		rt.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public void sleep()
+	{
+		try {
+			Thread.sleep(2500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public void waitTillVisible(WebElement ele11) 
 	{
