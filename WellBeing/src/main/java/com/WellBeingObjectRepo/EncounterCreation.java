@@ -6,8 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.WellBeing.GenericUtility.WebdriverUtility;
+
 public class EncounterCreation {
 	public static Select s;
+	WebdriverUtility wd=new WebdriverUtility();
+	
 	@FindBy(xpath = "//a[.='Ambulatory Revisit']") private WebElement Encounter;
 	@FindBy(xpath = "//input[@name='PatientUhid']") private WebElement Uhid;
 	@FindBy(xpath = "//button[.='Search']") private WebElement Button;
@@ -24,6 +28,7 @@ public class EncounterCreation {
 	}
 	public void ecreation()
 	{
+		
 		Encounter.click();
 	}
 	public void Uhid(String value)
@@ -40,21 +45,26 @@ public class EncounterCreation {
 	}
 	public void patientTypeDpdn(String text1)
 	{
+		wd.waitTillVisible(patientType);
 		s=new Select(patientType);
 		s.selectByVisibleText(text1);
+		
 	}
 	public void deptDpdn(String text2)
 	{
+		wd.waitTillVisible(Department);
 		s=new Select(Department);
 		s.selectByVisibleText(text2);
 	}
 	public void providerDpdn(String text3)
 	{
+		wd.waitTillVisible(Provider);
 		s=new Select(Provider);
 		s.selectByVisibleText(text3);
 	}
 	public void locDpdn(String text4)
 	{
+		wd.waitTillVisible(Location);
 		s=new Select(Location);
 		s.selectByVisibleText(text4);
 	}
@@ -64,7 +74,9 @@ public class EncounterCreation {
 	}
 	public String getEid()
 	{
-		return Eid.getText();
+		 String txt = Eid.getText();
+		 return txt;
 	}
+	
 }
 
