@@ -51,6 +51,7 @@ public class PatientRegistration
 	{
 		SubmitButton.click();
 	}
+	
 
 
 
