@@ -21,10 +21,10 @@ public class PatientRegistration
 	{
 		PageFactory.initElements(driver, this);
 	}
-	public void title(String text)
+	public void title(int index)
 	{
 		s=new Select(Title);
-		s.selectByVisibleText(text);
+		s.selectByIndex(index);
 	}
 	public void firstName(String Name)
 	{

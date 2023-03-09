@@ -6,101 +6,63 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import com.WellBeingObjectRepo.CommonPage;
+import com.WellBeingObjectRepo.IdentityManagement;
 import com.WellBeingObjectRepo.LoginPage;
+import com.WellBeingObjectRepo.PatientRegistration;
 
-public class BaseClass {
-
+public class BaseClass
+{
 	protected  WebDriver driver;
 	public  WebDriver sdriver;
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 	protected ReadDataFromProperty Property;
 	protected LoginPage Log;
 	protected CommonPage Com;
 	protected JavaUtility java;
 	protected WebdriverUtility wd;
 	protected ReadDataFromExcel exl;
+	protected IdentityManagement idntmgt;
+	protected PatientRegistration patient;
 
 	@BeforeClass
 	public void Launch()
 	{
+
 		Property=new ReadDataFromProperty();
 		java=new JavaUtility();
 		wd=new WebdriverUtility();
 		exl=new ReadDataFromExcel();
 
-		Log=new LoginPage(driver);
-		Com=new CommonPage(driver);
+
 
 		String Browser = Property.getPropertyData(PropertyFileKeys.BROWSER.getKey());
 		String Url = Property.getPropertyData(PropertyFileKeys.URL.getKey());
 		String Time = Property.getPropertyData(PropertyFileKeys.TIMEOUT.getKey());
 		Long timeWait = (Long)java.stringToAnyDataType(Time, "long");
-<<<<<<< HEAD
 
-
-
-
-=======
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 		sdriver=driver;
 		driver=wd.LaunchApp(Browser, Url,timeWait);
-<<<<<<< HEAD
-
 		Log=new LoginPage(driver);
-
-
-
-
-
-		Log=new LoginPage(driver);
-
 		Com=new CommonPage(driver);
-
-=======
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
+		idntmgt=new IdentityManagement(driver);
+		patient=new PatientRegistration(driver);
 	}
 
 	@BeforeMethod
 	public void Login()
-<<<<<<< HEAD
-	{ 
-
-=======
-	{ 		
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
-		LoginPage log =new LoginPage(driver);
+	{	
 		String option = Property.getPropertyData(PropertyFileKeys.OPTION.getKey());
-		System.out.println(option);
 		String Id = Property.getPropertyData(PropertyFileKeys.LOGINID.getKey());
-		System.out.println(Id);
 		String Password = Property.getPropertyData(PropertyFileKeys.PASSWORD.getKey());
 
-<<<<<<< HEAD
-
-		System.out.println(Password);
-
-
-
-
-
-=======
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 		Log.facilityClick();
 		Log.enterLoginId(Id);
 		Log.pwd(Password);
 		Log.signButton();
-
 	}
 	@AfterMethod
 	public void Logout()
 	{
-		driver.quit();
+		//driver.quit();
 		//		Com.logOutApp();
 		//		WebElement w1 = Com.returnLog();
 		//		wd.waitTillVisible(w1);
