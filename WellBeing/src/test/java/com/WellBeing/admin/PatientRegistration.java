@@ -98,13 +98,7 @@ public class PatientRegistration extends BaseClass
 		ecCreate.locDpdn("General Medicine Clinic");
 		ecCreate.saveButton();
 		String gntdEid = ecCreate.getEid();
-		System.out.println(gntdEid);
-		
-		
-		
-		
-		
-		
+		System.out.println(gntdEid);		
 		
 	}
 }
