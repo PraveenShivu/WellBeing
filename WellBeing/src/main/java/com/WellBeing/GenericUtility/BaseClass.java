@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import com.WellBeingObjectRepo.CommonPage;
+import com.WellBeingObjectRepo.EncounterCreation;
 import com.WellBeingObjectRepo.IdentityManagement;
 import com.WellBeingObjectRepo.LoginPage;
 import com.WellBeingObjectRepo.PatientRegistration;
@@ -22,7 +23,8 @@ public class BaseClass
 	protected ReadDataFromExcel exl;
 	protected IdentityManagement idntmgt;
 	protected PatientRegistration patient;
-
+	protected EncounterCreation ecCreate;
+	protected int randomNumber;
 	@BeforeClass
 	public void Launch()
 	{
@@ -38,6 +40,10 @@ public class BaseClass
 		String Url = Property.getPropertyData(PropertyFileKeys.URL.getKey());
 		String Time = Property.getPropertyData(PropertyFileKeys.TIMEOUT.getKey());
 		Long timeWait = (Long)java.stringToAnyDataType(Time, "long");
+		String numberLimit = Property.getPropertyData(PropertyFileKeys.LIMIT.getKey());
+		randomNumber = java.getRandomNumber((Integer) java.stringToAnyDataType(numberLimit, "int"));
+
+
 
 		sdriver=driver;
 		driver=wd.LaunchApp(Browser, Url,timeWait);
@@ -45,6 +51,7 @@ public class BaseClass
 		Com=new CommonPage(driver);
 		idntmgt=new IdentityManagement(driver);
 		patient=new PatientRegistration(driver);
+		ecCreate= new EncounterCreation(driver);
 	}
 
 	@BeforeMethod

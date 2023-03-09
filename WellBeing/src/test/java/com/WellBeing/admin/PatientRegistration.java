@@ -74,12 +74,34 @@ public class PatientRegistration extends BaseClass
 		Com.identityClick();
 		idntmgt.patientRegistrationButton();
 		patient.title(4);
-		patient.firstName(actKey2);
-		patient.lastName(actKey3);
-		Thread.sleep(3000);
+		patient.firstName(actKey2+randomNumber);
+		patient.lastName(actKey3+randomNumber);
+		//Thread.sleep(3000);
 		patient.Gender(actKey4);
 		patient.Num(actKey6);
 		patient.But();
+		String id = patient.popupUnsuccess();
+		System.out.println(id);
+		String uId = patient.getUhid();
+		String gntdId = java.getId(uId);
+		Com.identityClick();
+		//Thread.sleep(5000);
+		idntmgt.encounterCreationButton();
+		ecCreate.ecreation();
+		ecCreate.Uhid(gntdId);
+		wd.KeyBoard();
+		ecCreate.Search();
+		ecCreate.COH();
+		ecCreate.patientTypeDpdn("Ambulatory Patient");
+		ecCreate.deptDpdn("General Medicine");
+		ecCreate.providerDpdn("OGHENEFEJIRO  OGHI");
+		ecCreate.locDpdn("General Medicine Clinic");
+		ecCreate.saveButton();
+		String gntdEid = ecCreate.getEid();
+		System.out.println(gntdEid);
+		
+		
+		
 		
 		
 		
