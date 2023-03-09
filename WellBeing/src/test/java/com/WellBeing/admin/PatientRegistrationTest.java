@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import com.WellBeing.GenericUtility.BaseClass;
 import com.WellBeing.GenericUtility.ExcelFilesKey;
 
-public class PatientRegistration extends BaseClass
+public class PatientRegistrationTest extends BaseClass
 {
 	@Test
 	public void patientTest() throws InterruptedException
@@ -83,8 +83,10 @@ public class PatientRegistration extends BaseClass
 		System.out.println(id);
 		String uId = patient.getUhid();
 		String gntdId = java.getId(uId);
+		System.out.println(gntdId);
 		Com.identityClick();
 		idntmgt.encounterCreationButton();
+		
 		//Thread.sleep(5000);
 		ecCreate.ecreation();
 		//Thread.sleep(5000);
