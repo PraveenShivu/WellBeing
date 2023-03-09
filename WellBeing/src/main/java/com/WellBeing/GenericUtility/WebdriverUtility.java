@@ -17,6 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebdriverUtility {
 	WebDriver driver;
+	Robot rt;
 
 	public WebDriver LaunchApp(String Browser,String Url,long time)
 	{
@@ -66,13 +67,15 @@ public class WebdriverUtility {
 		s.selectByValue("1");
 
 	}
-
-
-
-
-	public void KeyBoard() throws AWTException
+	public void KeyBoard() 
 	{
-		Robot rt=new Robot();
+		
+		try {
+			rt = new Robot();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		rt.keyPress(KeyEvent.VK_DOWN);
 		rt.keyRelease(KeyEvent.VK_DOWN);
 		rt.keyPress(KeyEvent.VK_ENTER);

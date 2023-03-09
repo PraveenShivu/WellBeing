@@ -16,7 +16,9 @@ public class PatientRegistration
 	@FindBy(xpath = "//textarea[@id='PresentAddress1']") private WebElement Address;
 	@FindBy(xpath = "//input[@id='MobileNumber']") private WebElement MobNum;
 	@FindBy(xpath = "//button[.='Submit']") private WebElement SubmitButton;
-
+	@FindBy(xpath = "//div[@id='AlreadyExistsAlertDiv']") private WebElement failedPopup;
+	@FindBy(xpath = "//b[contains(.,'COH')]") private WebElement successPopup;
+ 
 	public PatientRegistration(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -51,6 +53,18 @@ public class PatientRegistration
 	{
 		SubmitButton.click();
 	}
+
+	public String popupUnsuccess()
+	{
+		String msg = failedPopup.getText();
+		return msg;
+	}
+	public String getUhid()
+	{
+		String susscessMsg = successPopup.getText();
+		return susscessMsg;
+	}
+
 	
 
 
