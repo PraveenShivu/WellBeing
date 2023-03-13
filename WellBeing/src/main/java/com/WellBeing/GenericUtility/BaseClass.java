@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import com.WellBeingObjectRepo.CommonPage;
 import com.WellBeingObjectRepo.EncounterCreation;
 import com.WellBeingObjectRepo.IdentityManagement;
+import com.WellBeingObjectRepo.Laboratory;
 import com.WellBeingObjectRepo.LoginPage;
 import com.WellBeingObjectRepo.PatientRegistration;
 
@@ -25,6 +26,7 @@ public class BaseClass
 	protected PatientRegistration patient;
 	protected EncounterCreation ecCreate;
 	protected int randomNumber;
+	protected Laboratory lab;
 	@BeforeClass
 	public void Launch()
 	{
@@ -52,6 +54,7 @@ public class BaseClass
 		idntmgt=new IdentityManagement(driver);
 		patient=new PatientRegistration(driver);
 		ecCreate= new EncounterCreation(driver);
+		 lab = new Laboratory(driver);
 	}
 
 	@BeforeMethod
