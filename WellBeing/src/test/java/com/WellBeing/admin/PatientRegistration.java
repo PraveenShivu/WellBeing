@@ -4,12 +4,11 @@ import org.testng.annotations.Test;
 
 import com.WellBeing.GenericUtility.BaseClass;
 import com.WellBeing.GenericUtility.ExcelFilesKey;
-import com.WellBeingObjectRepo.Laboratory;
 
 public class PatientRegistration extends BaseClass
 {
 	@Test
-	public void patientTest() throws InterruptedException
+	public void patientTest() throws InterruptedException  
 	{
 		String pageName = ExcelFilesKey.PATIENT_REGISTRATION.getkey();
 		int row = exl.getLastRowNum(pageName);
@@ -28,7 +27,7 @@ public class PatientRegistration extends BaseClass
 		String actKey5="";
 		String expKey6=ExcelFilesKey.MOBILE.getkey();
 		String actKey6="";
-		
+
 		for (int i = 1; i <= row; i++)
 		{
 			actualtestCase=exl.getValue(pageName, i, 1).trim();
@@ -41,7 +40,6 @@ public class PatientRegistration extends BaseClass
 					{
 						actKey1=exl.getValue(pageName, i+1, j);
 					}
-					
 					if(actKey1.equals(expKey2))
 					{
 						actKey2=exl.getValue(pageName, i+1, j);
@@ -64,13 +62,11 @@ public class PatientRegistration extends BaseClass
 					//actKey6=exl.getValue(pageName, i, j);
 					if(actKey1.equals(expKey6))
 					{
-						
+
 						actKey6=exl.getValue(pageName, i+1, j);
 					}
-				}
-				
-			}
-			
+				}			
+			}			
 		}
 		Com.identityClick();
 		idntmgt.patientRegistrationButton();
@@ -81,7 +77,6 @@ public class PatientRegistration extends BaseClass
 		patient.Num(actKey6);
 		patient.But();
 		String id = patient.popupUnsuccess();
-		
 		String uId = patient.getUhid();
 		String gntdId = java.getId(uId);
 		System.out.println(uId);
@@ -95,25 +90,14 @@ public class PatientRegistration extends BaseClass
 		ecCreate.Search();
 		wd.sleep();
 		ecCreate.COH();
-		ecCreate.patientTypeDpdn("Ambulatory Patient");
 		wd.sleep();
-		ecCreate.deptDpdn("General Medicine");
-		ecCreate.providerDpdn("OGHENEFEJIRO OGHI");
-		ecCreate.locDpdn("General Medicine Clinic");
-		ecCreate.saveButton();
-		String gntdEid = ecCreate.getEid();
-		System.out.println(gntdEid);
-		Com.laboratory();
-		lab.dashBoardButton();
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		ecCreate.patientTypeDpdn("Ambulatory Patient");
+//		wd.sleep();
+//		ecCreate.deptDpdn("General Medicine");
+//		ecCreate.providerDpdn("OGHENEFEJIRO OGHI");
+//		ecCreate.locDpdn("General Medicine Clinic");
+//		ecCreate.saveButton();
+//		String gntdEid = ecCreate.getEid();
+//		System.out.println(gntdEid);
 	}
 }

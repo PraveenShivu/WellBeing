@@ -5,10 +5,14 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -47,23 +51,24 @@ public class WebdriverUtility {
 	}
 	public void waitapp1(long timeout,WebElement ele)
 	{
-		 wait1=new WebDriverWait(driver, timeout);
+		wait1=new WebDriverWait(driver, timeout);
 		wait1.until(ExpectedConditions.visibilityOf(ele));
 	}
 	public void waitapp2(long timeout,WebElement ele)
 	{
 
-		 wait1=new WebDriverWait(driver, timeout);
-		 wait1.until(ExpectedConditions.invisibilityOf(ele));
+		wait1=new WebDriverWait(driver, timeout);
+		wait1.until(ExpectedConditions.invisibilityOf(ele));
 	}
 	public void waitApp3(long timeout,WebElement ele)
 	{
-		
-
 		WebDriverWait wait2=new WebDriverWait(driver, timeout);
 		wait2.until(ExpectedConditions.invisibilityOf(ele));
-		
 
+	}
+	public void waitAndClick(WebElement ele)
+	{
+		wait1.until(ExpectedConditions.elementToBeClickable(ele));
 	}
 
 	public void drop(WebElement ele,String text)
@@ -80,7 +85,7 @@ public class WebdriverUtility {
 	}
 	public void KeyBoard() 
 	{
-		
+
 		try {
 			rt = new Robot();
 		} catch (AWTException e) {
@@ -101,7 +106,7 @@ public class WebdriverUtility {
 			e.printStackTrace();
 		}
 	}
-	public void waitTillVisible(WebElement ele11) 
+	public void waitTillEleClickable(WebElement ele11) 
 	{
 		int count=0;
 		while(count<15)
@@ -121,5 +126,15 @@ public class WebdriverUtility {
 				count++;
 			}
 		}
+	}
+	public void newAction(WebElement ele)
+	{
+		Actions act=new Actions(driver);
+		act.doubleClick(ele);
+	}
+	public void javaScriptExe(WebElement ele)
+	{
+		JavascriptExecutor jse=(JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].click();",ele);
 	}
 }

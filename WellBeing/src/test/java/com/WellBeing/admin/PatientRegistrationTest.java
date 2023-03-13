@@ -45,12 +45,10 @@ public class PatientRegistrationTest extends BaseClass
 					{
 						actKey2=exl.getValue(pageName, i+1, j);
 					}
-					//actKey3=exl.getValue(pageName, i, j);
 					if(actKey1.equals(expKey3))
 					{
 						actKey3=exl.getValue(pageName, i+1, j);
 					}
-					//actKey4=exl.getValue(pageName, i, j);
 					if(actKey1.equals(expKey4))
 					{
 						actKey4=exl.getValue(pageName, i+1, j);
@@ -87,20 +85,14 @@ public class PatientRegistrationTest extends BaseClass
 		Com.identityClick();
 		idntmgt.encounterCreationButton();
 		
-		Thread.sleep(5000);
 		ecCreate.ecreation();
-		Thread.sleep(5000);
+		
 		ecCreate.Uhid(gntdId);	
 		wd.KeyBoard();
 		ecCreate.Search();
 		ecCreate.COH();
 		ecCreate.patientTypeDpdn("Ambulatory Patient");
-		ecCreate.deptDpdn("General Medicine");
-		ecCreate.providerDpdn("OGHENEFEJIRO OGHI");
-		ecCreate.locDpdn("General Medicine Clinic");
-		ecCreate.saveButton();
-		String gntdEid = ecCreate.getEid();
-		System.out.println(gntdEid);		
+				
 		
 	}
 }

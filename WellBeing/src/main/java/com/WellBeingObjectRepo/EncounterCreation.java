@@ -16,8 +16,7 @@ public class EncounterCreation {
 	@FindBy(xpath = "//input[@name='PatientUhid']") private WebElement Uhid;
 	@FindBy(xpath = "//button[.='Search']") private WebElement Button;
 	@FindBy(xpath = "//td[@class='sorting_1']/a") private WebElement COHID; 
-	@FindBy(xpath = "//select") private WebElement encounterPage;
-	@FindBy(xpath = "//select[@id='Patienttype']") private WebElement patientType;
+	@FindBy(xpath = "//select[@id='Patienttype']") private WebElement patientType;	
 	@FindBy(xpath = "//select[@id='SelectedFacilityDepartment']") private WebElement Department;
 	@FindBy(xpath = "//select[@id='ProviderEncounter']") private WebElement Provider;
 	@FindBy(xpath = "//select[@id='FacilityDepartmentServiceLocationId']") private WebElement Location;
@@ -34,7 +33,7 @@ public class EncounterCreation {
 	}
 	public void Uhid(String value)
 	{
-		wd.waitTillVisible(Uhid);
+		wd.waitTillEleClickable(Uhid);
 		Uhid.sendKeys(value);
 	}
 	public void Search()
@@ -44,32 +43,30 @@ public class EncounterCreation {
 	}
 	public void COH()
 	{
-		wd.waitTillVisible(COHID);
+		wd.waitTillEleClickable(COHID);
 		COHID.click();
 	}
-	public void patientTypeDpdn(String text1)
-	{
-		
-		wd.waitTillVisible(patientType);
+	public void patientTypeDpdn(String text1) throws InterruptedException 
+	{		
+		wd.waitTillEleClickable(patientType);	
 		s=new Select(patientType);
-		s.selectByVisibleText(text1);
-		
+		s.selectByVisibleText(text1);		
 	}
 	public void deptDpdn(String text2)
 	{
-		wd.waitTillVisible(Department);
+		wd.waitTillEleClickable(Department);
 		s=new Select(Department);
 		s.selectByVisibleText(text2);
 	}
 	public void providerDpdn(String text3)
 	{
-		wd.waitTillVisible(Provider);
+		wd.waitTillEleClickable(Provider);
 		s=new Select(Provider);
 		s.selectByVisibleText(text3);
 	}
 	public void locDpdn(String text4)
 	{
-		wd.waitTillVisible(Location);
+		wd.waitTillEleClickable(Location);
 		s=new Select(Location);
 		s.selectByVisibleText(text4);
 	}
