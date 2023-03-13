@@ -49,7 +49,7 @@ public class EncounterCreation {
 	}
 	public void patientTypeDpdn(String text1)
 	{
-		wd.waitApp3(encounterPage);
+		
 		wd.waitTillVisible(patientType);
 		s=new Select(patientType);
 		s.selectByVisibleText(text1);
