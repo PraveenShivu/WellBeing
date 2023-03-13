@@ -2,38 +2,40 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-13T13:15:09 IST" name="Default suite" finished-at="2023-03-13T13:15:36 IST" duration-ms="27417">
+  <suite started-at="2023-03-13T14:42:59 IST" name="Default suite" finished-at="2023-03-13T14:43:07 IST" duration-ms="8350">
     <groups>
     </groups>
-    <test started-at="2023-03-13T13:15:09 IST" name="Default test" finished-at="2023-03-13T13:15:36 IST" duration-ms="27417">
+    <test started-at="2023-03-13T14:42:59 IST" name="Default test" finished-at="2023-03-13T14:43:07 IST" duration-ms="8350">
       <class name="com.WellBeing.admin.PatientRegistration">
-        <test-method is-config="true" signature="Launch()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T13:15:09 IST" name="Launch" finished-at="2023-03-13T13:15:13 IST" duration-ms="4037" status="PASS">
+        <test-method is-config="true" signature="Launch()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T14:42:59 IST" name="Launch" finished-at="2023-03-13T14:43:03 IST" duration-ms="4011" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Launch -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T13:15:13 IST" name="Login" finished-at="2023-03-13T13:15:14 IST" duration-ms="602" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T14:43:03 IST" name="Login" finished-at="2023-03-13T14:43:04 IST" duration-ms="649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="patientTest()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T13:15:14 IST" name="patientTest" finished-at="2023-03-13T13:15:36 IST" duration-ms="22713" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+        <test-method signature="patientTest()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T14:43:04 IST" name="patientTest" finished-at="2023-03-13T14:43:07 IST" duration-ms="3625" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[element not interactable
+              <![CDATA[stale element reference: element is not attached to the page document
   (Session info: chrome=111.0.5563.64)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-S40FGN7', ip: '192.168.29.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.64, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\prave\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62264}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f12eb2f3f9aee00779e1c1a83e41a77b]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.64, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\prave\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63364}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee2accac2c8255eeecc6a07cfa1bc52a]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=111.0.5563.64)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-S40FGN7', ip: '192.168.29.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.64, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\prave\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62264}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f12eb2f3f9aee00779e1c1a83e41a77b
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.64, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\prave\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63364}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee2accac2c8255eeecc6a07cfa1bc52a
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -46,15 +48,15 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
-at com.WellBeingObjectRepo.EncounterCreation.COH(EncounterCreation.java:48)
-at com.WellBeing.admin.PatientRegistration.patientTest(PatientRegistration.java:98)
+at jdk.proxy2/jdk.proxy2.$Proxy13.getText(Unknown Source)
+at com.WellBeingObjectRepo.PatientRegistration.popupUnsuccess(PatientRegistration.java:59)
+at com.WellBeing.admin.PatientRegistration.patientTest(PatientRegistration.java:84)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -85,11 +87,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- patientTest -->
-        <test-method is-config="true" signature="Logout()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T13:15:36 IST" name="Logout" finished-at="2023-03-13T13:15:36 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="Logout()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T14:43:07 IST" name="Logout" finished-at="2023-03-13T14:43:07 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logout -->

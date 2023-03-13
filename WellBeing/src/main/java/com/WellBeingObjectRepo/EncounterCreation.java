@@ -17,7 +17,7 @@ public class EncounterCreation {
 	@FindBy(xpath = "//button[.='Search']") private WebElement Button;
 	@FindBy(xpath = "//td[@class='sorting_1']/a") private WebElement COHID; 
 	@FindBy(xpath = "//select") private WebElement encounterPage;
-	@FindBy(xpath = "//select[@id='Patienttype']") private WebElement patientType;
+	@FindBy(xpath = "//div[@id='PatientTypeDiv']") private WebElement patientType;
 	@FindBy(xpath = "//select[@id='SelectedFacilityDepartment']") private WebElement Department;
 	@FindBy(xpath = "//select[@id='ProviderEncounter']") private WebElement Provider;
 	@FindBy(xpath = "//select[@id='FacilityDepartmentServiceLocationId']") private WebElement Location;
@@ -50,7 +50,7 @@ public class EncounterCreation {
 	public void patientTypeDpdn(String text1)
 	{
 		
-		wd.waitApp3(10, patientType);
+		wd.waitTillVisible(patientType);
 		s=new Select(patientType);
 		s.selectByVisibleText(text1);
 		
