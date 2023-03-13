@@ -1,74 +1,41 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2023-03-13T10:58:50 IST" name="Default suite" finished-at="2023-03-13T10:59:15 IST" duration-ms="25183">
-    <groups>
-    </groups>
-    <test started-at="2023-03-13T10:58:50 IST" name="Default test" finished-at="2023-03-13T10:59:15 IST" duration-ms="25183">
-      <class name="com.WellBeing.admin.PatientRegistration">
-        <test-method is-config="true" signature="Launch()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T10:58:50 IST" name="Launch" finished-at="2023-03-13T10:58:55 IST" duration-ms="5053" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Launch -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T10:58:55 IST" name="Login" finished-at="2023-03-13T10:58:55 IST" duration-ms="505" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method signature="patientTest()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T10:58:55 IST" name="patientTest" finished-at="2023-03-13T10:59:15 IST" duration-ms="19570" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- patientTest -->
-        <test-method is-config="true" signature="Logout()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-13T10:59:15 IST" name="Logout" finished-at="2023-03-13T10:59:15 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Logout -->
-      </class> <!-- com.WellBeing.admin.PatientRegistration -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
-</testng-results>
-=======
-<<<<<<< HEAD
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-13T11:00:43 IST" name="Default suite" finished-at="2023-03-13T11:01:06 IST" duration-ms="23219">
+  <suite started-at="2023-03-13T11:10:16 IST" name="Default suite" finished-at="2023-03-13T11:10:22 IST" duration-ms="5746">
     <groups>
     </groups>
-    <test started-at="2023-03-13T11:00:43 IST" name="Default test" finished-at="2023-03-13T11:01:06 IST" duration-ms="23219">
+    <test started-at="2023-03-13T11:10:16 IST" name="Default test" finished-at="2023-03-13T11:10:22 IST" duration-ms="5746">
       <class name="com.WellBeing.admin.PatientRegistrationTest">
-        <test-method is-config="true" signature="Launch()[pri:0, instance:com.WellBeing.admin.PatientRegistrationTest@342c38f8]" started-at="2023-03-13T11:00:43 IST" name="Launch" finished-at="2023-03-13T11:00:49 IST" duration-ms="6062" status="PASS">
+        <test-method is-config="true" signature="Launch()[pri:0, instance:com.WellBeing.admin.PatientRegistrationTest@342c38f8]" started-at="2023-03-13T11:10:16 IST" name="Launch" finished-at="2023-03-13T11:10:19 IST" duration-ms="2276" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Launch -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:com.WellBeing.admin.PatientRegistrationTest@342c38f8]" started-at="2023-03-13T11:00:49 IST" name="Login" finished-at="2023-03-13T11:00:49 IST" duration-ms="356" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:com.WellBeing.admin.PatientRegistrationTest@342c38f8]" started-at="2023-03-13T11:10:19 IST" name="Login" finished-at="2023-03-13T11:10:19 IST" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="patientTest()[pri:0, instance:com.WellBeing.admin.PatientRegistrationTest@342c38f8]" started-at="2023-03-13T11:00:49 IST" name="patientTest" finished-at="2023-03-13T11:01:06 IST" duration-ms="16752" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+        <test-method signature="patientTest()[pri:0, instance:com.WellBeing.admin.PatientRegistrationTest@342c38f8]" started-at="2023-03-13T11:10:19 IST" name="patientTest" finished-at="2023-03-13T11:10:22 IST" duration-ms="3213" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[element not interactable
+              <![CDATA[stale element reference: element is not attached to the page document
   (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-98QEEPAM', ip: '192.168.29.216', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\shiva\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50336}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ecddc31f49316d212cf88a0566e78134]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\shiva\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50906}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ff4ae5623f0228dc3d0eeb07d95b647e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-98QEEPAM', ip: '192.168.29.216', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\shiva\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50336}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ecddc31f49316d212cf88a0566e78134
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\shiva\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50906}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ff4ae5623f0228dc3d0eeb07d95b647e
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -81,15 +48,15 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
-at com.WellBeingObjectRepo.EncounterCreation.COH(EncounterCreation.java:48)
-at com.WellBeing.admin.PatientRegistrationTest.patientTest(PatientRegistrationTest.java:96)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+at com.WellBeingObjectRepo.EncounterCreation.Uhid(EncounterCreation.java:38)
+at com.WellBeing.admin.PatientRegistrationTest.patientTest(PatientRegistrationTest.java:93)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -120,11 +87,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- patientTest -->
-        <test-method is-config="true" signature="Logout()[pri:0, instance:com.WellBeing.admin.PatientRegistrationTest@342c38f8]" started-at="2023-03-13T11:01:06 IST" name="Logout" finished-at="2023-03-13T11:01:06 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Logout()[pri:0, instance:com.WellBeing.admin.PatientRegistrationTest@342c38f8]" started-at="2023-03-13T11:10:22 IST" name="Logout" finished-at="2023-03-13T11:10:22 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logout -->
@@ -132,38 +99,3 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
-<<<<<<< HEAD
-=======
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2023-03-09T17:27:02 IST" name="Default suite" finished-at="2023-03-09T17:27:23 IST" duration-ms="21711">
-    <groups>
-    </groups>
-    <test started-at="2023-03-09T17:27:02 IST" name="Default test" finished-at="2023-03-09T17:27:23 IST" duration-ms="21711">
-      <class name="com.WellBeing.admin.PatientRegistration">
-        <test-method is-config="true" signature="Launch()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-09T17:27:02 IST" name="Launch" finished-at="2023-03-09T17:27:05 IST" duration-ms="3703" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Launch -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-09T17:27:05 IST" name="Login" finished-at="2023-03-09T17:27:06 IST" duration-ms="499" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method signature="patientTest()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-09T17:27:06 IST" name="patientTest" finished-at="2023-03-09T17:27:23 IST" duration-ms="17450" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- patientTest -->
-        <test-method is-config="true" signature="Logout()[pri:0, instance:com.WellBeing.admin.PatientRegistration@342c38f8]" started-at="2023-03-09T17:27:23 IST" name="Logout" finished-at="2023-03-09T17:27:23 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Logout -->
-      </class> <!-- com.WellBeing.admin.PatientRegistration -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
-</testng-results>
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
