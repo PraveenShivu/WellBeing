@@ -87,13 +87,14 @@ public class PatientRegistrationTest extends BaseClass
 		Com.identityClick();
 		idntmgt.encounterCreationButton();
 		
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		ecCreate.ecreation();
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		ecCreate.Uhid(gntdId);	
 		wd.KeyBoard();
 		ecCreate.Search();
 		ecCreate.COH();
+		Thread.sleep(5000);
 		ecCreate.patientTypeDpdn("Ambulatory Patient");
 		ecCreate.deptDpdn("General Medicine");
 		ecCreate.providerDpdn("OGHENEFEJIRO OGHI");

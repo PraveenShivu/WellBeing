@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.WellBeing.GenericUtility.BaseClass;
 import com.WellBeing.GenericUtility.ExcelFilesKey;
+import com.WellBeingObjectRepo.BillingManagement;
 import com.WellBeingObjectRepo.Laboratory;
 
 public class PatientRegistration extends BaseClass
@@ -95,6 +96,7 @@ public class PatientRegistration extends BaseClass
 		ecCreate.Search();
 		wd.sleep();
 		ecCreate.COH();
+		wd.sleep();
 		ecCreate.patientTypeDpdn("Ambulatory Patient");
 		wd.sleep();
 		ecCreate.deptDpdn("General Medicine");
@@ -103,8 +105,20 @@ public class PatientRegistration extends BaseClass
 		ecCreate.saveButton();
 		String gntdEid = ecCreate.getEid();
 		System.out.println(gntdEid);
-		Com.laboratory();
-		lab.dashBoardButton();
+		Com.accountManagement();
+		acc.billingButton();
+		bill.Uhid(uId);
+		bill.SearchBtn();
+		
+		
+		
+		
+		
+		
+		
+		
+		//Com.laboratory();
+		//lab.dashBoardButton();
 		
 		
 		

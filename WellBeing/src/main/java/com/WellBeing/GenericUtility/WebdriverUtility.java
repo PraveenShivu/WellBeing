@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -61,7 +62,7 @@ public class WebdriverUtility {
 		
 
 		WebDriverWait wait2=new WebDriverWait(driver, timeout);
-		wait2.until(ExpectedConditions.invisibilityOf(ele));
+		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='Patienttype']")));
 		
 
 	}

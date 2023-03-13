@@ -6,8 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.WellBeing.GenericUtility.WebdriverUtility;
+
 public class BillingManagement
+
 {
+	WebdriverUtility Wd=new WebdriverUtility();
 	@FindBy(xpath = "//input[@id='PatientUhid']") private WebElement uhid;
 	@FindBy(xpath = "//button[@id='searchPatient']") private WebElement searchPatient;
 	@FindBy(xpath = "//input[@id='ServiceName']") private WebElement service;
@@ -20,6 +24,16 @@ public class BillingManagement
 	public BillingManagement(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
+	}
+	public void Uhid(String text)
+	{
+		uhid.sendKeys(text);
+		Wd.KeyBoard();
+		
+	}
+	public void SearchBtn()
+	{
+		searchPatient.click();
 	}
 	public void enterServiceName(String services)
 	{

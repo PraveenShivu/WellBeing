@@ -3,7 +3,7 @@ package com.WellBeingObjectRepo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.PageFactory;import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.WellBeing.GenericUtility.WebdriverUtility;
@@ -50,7 +50,7 @@ public class EncounterCreation {
 	public void patientTypeDpdn(String text1)
 	{
 		
-		wd.waitTillVisible(patientType);
+		wd.waitApp3(10, patientType);
 		s=new Select(patientType);
 		s.selectByVisibleText(text1);
 		
