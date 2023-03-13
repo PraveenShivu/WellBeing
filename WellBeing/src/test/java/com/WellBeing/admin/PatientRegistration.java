@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.WellBeing.GenericUtility.BaseClass;
 import com.WellBeing.GenericUtility.ExcelFilesKey;
+import com.WellBeingObjectRepo.Laboratory;
 
 public class PatientRegistration extends BaseClass
 {
@@ -80,9 +81,10 @@ public class PatientRegistration extends BaseClass
 		patient.Num(actKey6);
 		patient.But();
 		String id = patient.popupUnsuccess();
-		System.out.println(id);
+		
 		String uId = patient.getUhid();
 		String gntdId = java.getId(uId);
+		System.out.println(uId);
 		Com.identityClick();
 		idntmgt.encounterCreationButton();
 		wd.sleep();
@@ -101,6 +103,11 @@ public class PatientRegistration extends BaseClass
 		ecCreate.saveButton();
 		String gntdEid = ecCreate.getEid();
 		System.out.println(gntdEid);
+		Com.laboratory();
+		lab.dashBoardButton();
+		
+		
+		
 		
 		
 		
