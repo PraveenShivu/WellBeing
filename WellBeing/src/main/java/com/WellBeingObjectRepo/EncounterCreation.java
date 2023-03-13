@@ -16,6 +16,7 @@ public class EncounterCreation {
 	@FindBy(xpath = "//input[@name='PatientUhid']") private WebElement Uhid;
 	@FindBy(xpath = "//button[.='Search']") private WebElement Button;
 	@FindBy(xpath = "//td[@class='sorting_1']/a") private WebElement COHID; 
+	@FindBy(xpath = "//select") private WebElement encounterPage;
 	@FindBy(xpath = "//select[@id='Patienttype']") private WebElement patientType;
 	@FindBy(xpath = "//select[@id='SelectedFacilityDepartment']") private WebElement Department;
 	@FindBy(xpath = "//select[@id='ProviderEncounter']") private WebElement Provider;
@@ -33,18 +34,22 @@ public class EncounterCreation {
 	}
 	public void Uhid(String value)
 	{
+		wd.waitTillVisible(Uhid);
 		Uhid.sendKeys(value);
 	}
 	public void Search()
 	{
+
 		Button.click();
 	}
 	public void COH()
 	{
+		wd.waitTillVisible(COHID);
 		COHID.click();
 	}
 	public void patientTypeDpdn(String text1)
 	{
+		wd.waitApp3(encounterPage);
 		wd.waitTillVisible(patientType);
 		s=new Select(patientType);
 		s.selectByVisibleText(text1);

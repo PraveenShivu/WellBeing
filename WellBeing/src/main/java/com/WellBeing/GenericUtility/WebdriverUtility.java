@@ -18,6 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class WebdriverUtility {
 	WebDriver driver;
 	Robot rt;
+	WebDriverWait wait1;
 
 	public WebDriver LaunchApp(String Browser,String Url,long time)
 	{
@@ -46,14 +47,23 @@ public class WebdriverUtility {
 	}
 	public void waitapp1(long timeout,WebElement ele)
 	{
-		WebDriverWait wait1=new WebDriverWait(driver, timeout);
+		 wait1=new WebDriverWait(driver, timeout);
 		wait1.until(ExpectedConditions.visibilityOf(ele));
 	}
 	public void waitapp2(long timeout,WebElement ele)
 	{
+<<<<<<< HEAD
+		 wait1=new WebDriverWait(driver, timeout);
+		 wait1.until(ExpectedConditions.invisibilityOf(ele));
+	}
+	public void waitApp3(WebElement ele)
+	{
+		wait1.until(ExpectedConditions.visibilityOfAllElements(ele));
+=======
 		WebDriverWait wait2=new WebDriverWait(driver, timeout);
 		wait2.until(ExpectedConditions.invisibilityOf(ele));
 		
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing
 	}
 
 	public void drop(WebElement ele,String text)
