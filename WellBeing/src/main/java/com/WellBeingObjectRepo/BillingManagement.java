@@ -16,7 +16,7 @@ public class BillingManagement
 	@FindBy(xpath = "//button[@id='searchPatient']") private WebElement searchPatient;
 	@FindBy(xpath = "//input[@id='ServiceName']") private WebElement service;
 	@FindBy(xpath = "//a[@id='SaveNewBill']/i") private WebElement saveBill;
-	@FindBy(xpath = "//table[@id='tableBilling']/tfoot/tr/th[3]") private WebElement totalAmount;
+	@FindBy(xpath = "//table[@id='tableBilling']/tfoot/tr/th[10]") private WebElement totalAmount;
 	@FindBy(xpath = "//select[@name='PaymentType-0']") private WebElement paymentType;
 	@FindBy(xpath = "//input[@name='InstrumentAmount-0']") private WebElement amount;
 	@FindBy(xpath = "//button[@id='saveBilling']") private WebElement saveBillButton;
@@ -38,6 +38,7 @@ public class BillingManagement
 	public void enterServiceName(String services)
 	{
 		service.sendKeys(services);
+		Wd.KeyBoard();
 	}
 	public void saveBillButton()
 	{

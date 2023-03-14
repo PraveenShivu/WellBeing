@@ -13,6 +13,7 @@ import com.WellBeingObjectRepo.IdentityManagement;
 import com.WellBeingObjectRepo.Laboratory;
 import com.WellBeingObjectRepo.LoginPage;
 import com.WellBeingObjectRepo.PatientRegistration;
+import com.WellBeingObjectRepo.labDashboard;
 
 public class BaseClass
 {
@@ -31,6 +32,7 @@ public class BaseClass
 	protected Laboratory lab;
 	protected AccountManagement acc;
 	protected BillingManagement bill;
+	protected labDashboard labd;
 	@BeforeClass
 	public void Launch()
 	{
@@ -60,7 +62,8 @@ public class BaseClass
 		ecCreate= new EncounterCreation(driver);
 		lab = new Laboratory(driver);
 		acc = new AccountManagement(driver);
-		BillingManagement bill = new BillingManagement(driver);
+		bill = new BillingManagement(driver);
+		labd=new labDashboard(driver);
 	}
 
 	@BeforeMethod

@@ -4,11 +4,7 @@ import org.testng.annotations.Test;
 
 import com.WellBeing.GenericUtility.BaseClass;
 import com.WellBeing.GenericUtility.ExcelFilesKey;
-<<<<<<< HEAD
-import com.WellBeingObjectRepo.BillingManagement;
-import com.WellBeingObjectRepo.Laboratory;
-=======
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
+
 
 public class PatientRegistration extends BaseClass
 {
@@ -81,8 +77,10 @@ public class PatientRegistration extends BaseClass
 		patient.Gender(actKey4);
 		patient.Num(actKey6);
 		patient.But();
+		wd.sleep();
 		String id = patient.popupUnsuccess();
 		String uId = patient.getUhid();
+		wd.sleep();
 		String gntdId = java.getId(uId);
 		System.out.println(uId);
 		Com.identityClick();
@@ -95,52 +93,34 @@ public class PatientRegistration extends BaseClass
 		ecCreate.Search();
 		wd.sleep();
 		ecCreate.COH();
-<<<<<<< HEAD
-		wd.sleep();
 		ecCreate.patientTypeDpdn("Ambulatory Patient");
-=======
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
 		wd.sleep();
-<<<<<<< HEAD
 		ecCreate.deptDpdn("General Medicine");
 		ecCreate.providerDpdn("OGHENEFEJIRO OGHI");
 		ecCreate.locDpdn("General Medicine Clinic");
 		ecCreate.saveButton();
 		String gntdEid = ecCreate.getEid();
 		System.out.println(gntdEid);
-		Com.accountManagement();
-		acc.billingButton();
-		bill.Uhid(uId);
-		bill.SearchBtn();
-		
-		
-		
-		
-		
-		
-		
-		
-		//Com.laboratory();
-		//lab.dashBoardButton();
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-=======
-		ecCreate.patientTypeDpdn("Ambulatory Patient");
-//		wd.sleep();
-//		ecCreate.deptDpdn("General Medicine");
-//		ecCreate.providerDpdn("OGHENEFEJIRO OGHI");
-//		ecCreate.locDpdn("General Medicine Clinic");
-//		ecCreate.saveButton();
-//		String gntdEid = ecCreate.getEid();
-//		System.out.println(gntdEid);
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
+//		Com.accountManagement();
+//		acc.billingButton();
+//		bill.Uhid(uId);
+//		bill.SearchBtn();
+//		String serName = ExcelFilesKey.SERVICE_LIST.getkey();
+//		int serLastRow = exl.getLastRowNum(serName);
+//		int serLastCell = exl.getLastCellNum(serName, 0);
+//		for (int k = 1; k < 4; k++) 
+//		{
+//		 String serList = exl.getValue(serName, k, 0);
+//		 bill.enterServiceName(serList);
+//		 bill.saveBillButton();
+//		 }
+//		 String amt = bill.totalAmount1();
+//		 bill.selectPayment("Cash");
+//		 bill.enterAmount(amt);
+//		 bill.clickSaveBill();
+//		 Com.laboratory();
+//		 lab.dashBoardButton();
+//		 labd.uhid(uId);
+//		 labd.searchBtn();
 	}
 }

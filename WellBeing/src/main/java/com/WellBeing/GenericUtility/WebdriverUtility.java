@@ -6,16 +6,12 @@ import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-<<<<<<< HEAD
-=======
 import org.openqa.selenium.JavascriptExecutor;
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -66,12 +62,12 @@ public class WebdriverUtility {
 	public void waitApp3(long timeout,WebElement ele)
 	{
 		WebDriverWait wait2=new WebDriverWait(driver, timeout);
-<<<<<<< HEAD
+
 		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='Patienttype']")));
 		
-=======
+
 		wait2.until(ExpectedConditions.invisibilityOf(ele));
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
+
 
 	}
 	public void waitAndClick(WebElement ele)
@@ -114,7 +110,7 @@ public class WebdriverUtility {
 			e.printStackTrace();
 		}
 	}
-	public void waitTillEleClickable(WebElement ele11) 
+	public void waitTillVissible(WebElement ele11) 
 	{
 		int count=0;
 		while(count<15)

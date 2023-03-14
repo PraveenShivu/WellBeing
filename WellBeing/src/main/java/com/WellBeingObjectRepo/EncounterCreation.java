@@ -16,12 +16,13 @@ public class EncounterCreation {
 	@FindBy(xpath = "//input[@name='PatientUhid']") private WebElement Uhid;
 	@FindBy(xpath = "//button[.='Search']") private WebElement Button;
 	@FindBy(xpath = "//td[@class='sorting_1']/a") private WebElement COHID; 
-<<<<<<< HEAD
-	@FindBy(xpath = "//select") private WebElement encounterPage;
-	@FindBy(xpath = "//div[@id='PatientTypeDiv']") private WebElement patientType;
-=======
-	@FindBy(xpath = "//select[@id='Patienttype']") private WebElement patientType;	
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
+
+	@FindBy(xpath = "//a[.='Encounter']") private WebElement encounterPage;
+	
+
+	@FindBy(xpath = "//select[@id='Patienttype']") private WebElement patientType;
+	
+
 	@FindBy(xpath = "//select[@id='SelectedFacilityDepartment']") private WebElement Department;
 	@FindBy(xpath = "//select[@id='ProviderEncounter']") private WebElement Provider;
 	@FindBy(xpath = "//select[@id='FacilityDepartmentServiceLocationId']") private WebElement Location;
@@ -38,7 +39,7 @@ public class EncounterCreation {
 	}
 	public void Uhid(String value)
 	{
-		wd.waitTillEleClickable(Uhid);
+	
 		Uhid.sendKeys(value);
 	}
 	public void Search()
@@ -48,30 +49,30 @@ public class EncounterCreation {
 	}
 	public void COH()
 	{
-		wd.waitTillEleClickable(COHID);
+		
 		COHID.click();
 	}
 	public void patientTypeDpdn(String text1) throws InterruptedException 
 	{		
-		wd.waitTillEleClickable(patientType);	
+		wd.waitTillVissible(patientType);	
 		s=new Select(patientType);
 		s.selectByVisibleText(text1);		
 	}
 	public void deptDpdn(String text2)
 	{
-		wd.waitTillEleClickable(Department);
+		wd.waitTillVissible(Department);
 		s=new Select(Department);
 		s.selectByVisibleText(text2);
 	}
 	public void providerDpdn(String text3)
 	{
-		wd.waitTillEleClickable(Provider);
+		wd.waitTillVissible(Provider);
 		s=new Select(Provider);
 		s.selectByVisibleText(text3);
 	}
 	public void locDpdn(String text4)
 	{
-		wd.waitTillEleClickable(Location);
+		wd.waitTillVissible(Location);
 		s=new Select(Location);
 		s.selectByVisibleText(text4);
 	}
