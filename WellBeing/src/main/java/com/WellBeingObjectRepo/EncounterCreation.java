@@ -11,7 +11,7 @@ import com.WellBeing.GenericUtility.WebdriverUtility;
 public class EncounterCreation {
 	public static Select s;
 	WebdriverUtility wd=new WebdriverUtility();
-	
+
 	@FindBy(xpath = "//a[.='Ambulatory Revisit']") private WebElement Encounter;
 	@FindBy(xpath = "//input[@name='PatientUhid']") private WebElement Uhid;
 	@FindBy(xpath = "//button[.='Search']") private WebElement Button;
@@ -34,12 +34,15 @@ public class EncounterCreation {
 	}
 	public void ecreation()
 	{
-		
+
 		Encounter.click();
 	}
 	public void Uhid(String value)
 	{
+<<<<<<< HEAD
 	
+=======
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
 		Uhid.sendKeys(value);
 	}
 	public void Search()
@@ -49,12 +52,19 @@ public class EncounterCreation {
 	}
 	public void COH()
 	{
+<<<<<<< HEAD
 		
+=======
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
 		COHID.click();
 	}
-	public void patientTypeDpdn(String text1) throws InterruptedException 
+	public void patientTypeDpdn(String text1) 
 	{		
+<<<<<<< HEAD
 		wd.waitTillVissible(patientType);	
+=======
+		wd.waitTillEleClickable(patientType);
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
 		s=new Select(patientType);
 		s.selectByVisibleText(text1);		
 	}
@@ -82,9 +92,9 @@ public class EncounterCreation {
 	}
 	public String getEid()
 	{
-		 String txt = Eid.getText();
-		 return txt;
+		String txt = Eid.getText();
+		return txt;
 	}
-	
+
 }
 

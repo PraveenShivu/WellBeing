@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.WellBeing.GenericUtility.BaseClass;
 import com.WellBeing.GenericUtility.ExcelFilesKey;
+import com.WellBeing.GenericUtility.PropertyFileKeys;
 
 
 public class PatientRegistration extends BaseClass
@@ -91,8 +92,10 @@ public class PatientRegistration extends BaseClass
 		ecCreate.Uhid(gntdId);	
 		wd.KeyBoard();
 		ecCreate.Search();
+
 		wd.sleep();
 		ecCreate.COH();
+<<<<<<< HEAD
 		ecCreate.patientTypeDpdn("Ambulatory Patient");
 		wd.sleep();
 		ecCreate.deptDpdn("General Medicine");
@@ -122,5 +125,16 @@ public class PatientRegistration extends BaseClass
 //		 lab.dashBoardButton();
 //		 labd.uhid(uId);
 //		 labd.searchBtn();
+=======
+		wd.sleep();
+		ecCreate.patientTypeDpdn(PropertyFileKeys.PATIENT_TYPE.getKey());
+		wd.sleep();
+		ecCreate.deptDpdn(PropertyFileKeys.DEPARTMENT.getKey());
+		ecCreate.providerDpdn(PropertyFileKeys.PROVIDER.getKey());
+		ecCreate.locDpdn(PropertyFileKeys.SERVICE_LOCATION.getKey());
+		ecCreate.saveButton();
+		String gntdEid = ecCreate.getEid();
+		System.out.println(gntdEid);
+>>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
 	}
 }
