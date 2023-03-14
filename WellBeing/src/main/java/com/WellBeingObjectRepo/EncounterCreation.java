@@ -11,7 +11,7 @@ import com.WellBeing.GenericUtility.WebdriverUtility;
 public class EncounterCreation {
 	public static Select s;
 	WebdriverUtility wd=new WebdriverUtility();
-	
+
 	@FindBy(xpath = "//a[.='Ambulatory Revisit']") private WebElement Encounter;
 	@FindBy(xpath = "//input[@name='PatientUhid']") private WebElement Uhid;
 	@FindBy(xpath = "//button[.='Search']") private WebElement Button;
@@ -28,12 +28,11 @@ public class EncounterCreation {
 	}
 	public void ecreation()
 	{
-		
+
 		Encounter.click();
 	}
 	public void Uhid(String value)
 	{
-		wd.waitTillEleClickable(Uhid);
 		Uhid.sendKeys(value);
 	}
 	public void Search()
@@ -43,12 +42,11 @@ public class EncounterCreation {
 	}
 	public void COH()
 	{
-		wd.waitTillEleClickable(COHID);
 		COHID.click();
 	}
-	public void patientTypeDpdn(String text1) throws InterruptedException 
+	public void patientTypeDpdn(String text1) 
 	{		
-		wd.waitTillEleClickable(patientType);	
+		wd.waitTillEleClickable(patientType);
 		s=new Select(patientType);
 		s.selectByVisibleText(text1);		
 	}
@@ -76,9 +74,9 @@ public class EncounterCreation {
 	}
 	public String getEid()
 	{
-		 String txt = Eid.getText();
-		 return txt;
+		String txt = Eid.getText();
+		return txt;
 	}
-	
+
 }
 

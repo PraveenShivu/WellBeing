@@ -5,14 +5,12 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,6 +21,7 @@ public class WebdriverUtility {
 	WebDriver driver;
 	Robot rt;
 	WebDriverWait wait1;
+	JavascriptExecutor jse;
 
 	public WebDriver LaunchApp(String Browser,String Url,long time)
 	{
@@ -74,7 +73,7 @@ public class WebdriverUtility {
 	public void drop(WebElement ele,String text)
 	{
 		Select s=new Select(ele);
-		s.selectByIndex(1);
+		s.selectByVisibleText(text);
 
 	}
 	public void drop1(WebElement ele)
@@ -130,11 +129,15 @@ public class WebdriverUtility {
 	public void newAction(WebElement ele)
 	{
 		Actions act=new Actions(driver);
-		act.doubleClick(ele);
+		act.doubleClick(ele).perform();
 	}
 	public void javaScriptExe(WebElement ele)
 	{
-		JavascriptExecutor jse=(JavascriptExecutor) driver;
+		jse=(JavascriptExecutor) driver;
 		jse.executeScript("arguments[0].click();",ele);
+	}
+	public Object scrollAction()
+	{
+		return jse.executeScript("window.scrollBy(0,200)");
 	}
 }
