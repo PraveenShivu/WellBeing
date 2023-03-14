@@ -5,17 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-<<<<<<< HEAD
+
 
 import com.WellBeing.GenericUtility.WebdriverUtility;
 
-=======
-/**
- * 
- * @author shiva
- *
- */
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
+
 public class BillingManagement
 
 {
@@ -41,6 +35,7 @@ public class BillingManagement
 	}
 	public void SearchBtn()
 	{
+		Wd.sleep();
 		searchPatient.click();
 	}
 	public void enterServiceName(String services)

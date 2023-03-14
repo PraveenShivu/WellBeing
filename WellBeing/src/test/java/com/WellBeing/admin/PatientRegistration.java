@@ -92,49 +92,47 @@ public class PatientRegistration extends BaseClass
 		ecCreate.Uhid(gntdId);	
 		wd.KeyBoard();
 		ecCreate.Search();
-
 		wd.sleep();
 		ecCreate.COH();
-<<<<<<< HEAD
-		ecCreate.patientTypeDpdn("Ambulatory Patient");
-		wd.sleep();
-		ecCreate.deptDpdn("General Medicine");
-		ecCreate.providerDpdn("OGHENEFEJIRO OGHI");
-		ecCreate.locDpdn("General Medicine Clinic");
-		ecCreate.saveButton();
-		String gntdEid = ecCreate.getEid();
-		System.out.println(gntdEid);
-//		Com.accountManagement();
-//		acc.billingButton();
-//		bill.Uhid(uId);
-//		bill.SearchBtn();
-//		String serName = ExcelFilesKey.SERVICE_LIST.getkey();
-//		int serLastRow = exl.getLastRowNum(serName);
-//		int serLastCell = exl.getLastCellNum(serName, 0);
-//		for (int k = 1; k < 4; k++) 
-//		{
-//		 String serList = exl.getValue(serName, k, 0);
-//		 bill.enterServiceName(serList);
-//		 bill.saveBillButton();
-//		 }
-//		 String amt = bill.totalAmount1();
-//		 bill.selectPayment("Cash");
-//		 bill.enterAmount(amt);
-//		 bill.clickSaveBill();
-//		 Com.laboratory();
-//		 lab.dashBoardButton();
-//		 labd.uhid(uId);
-//		 labd.searchBtn();
-=======
 		wd.sleep();
 		ecCreate.patientTypeDpdn(PropertyFileKeys.PATIENT_TYPE.getKey());
 		wd.sleep();
 		ecCreate.deptDpdn(PropertyFileKeys.DEPARTMENT.getKey());
 		ecCreate.providerDpdn(PropertyFileKeys.PROVIDER.getKey());
+		wd.sleep();
 		ecCreate.locDpdn(PropertyFileKeys.SERVICE_LOCATION.getKey());
 		ecCreate.saveButton();
 		String gntdEid = ecCreate.getEid();
 		System.out.println(gntdEid);
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
+
+	
+		Com.accountManagement();
+		acc.billingButton();
+		wd.sleep();
+		bill.Uhid(gntdId);
+		
+		wd.sleep();
+		bill.SearchBtn();
+		wd.sleep();
+		String serName = ExcelFilesKey.SERVICE_LIST.getkey();
+		int serLastRow = exl.getLastRowNum(serName);
+		int serLastCell = exl.getLastCellNum(serName, 0);
+		for (int k = 1; k < 4; k++) 
+		{
+		 String serList = exl.getValue(serName, k, 0);
+		 bill.enterServiceName(serList);
+		 bill.saveBillButton();
+		 }
+		 String amt = bill.totalAmount1();
+		 bill.selectPayment("Cash");
+		 bill.enterAmount(amt);
+		 bill.clickSaveBill();
+		 Com.laboratory();
+		 lab.dashBoardButton();
+		 labd.uhid(uId);
+		 labd.searchBtn();
+
+	
+
 	}
 }

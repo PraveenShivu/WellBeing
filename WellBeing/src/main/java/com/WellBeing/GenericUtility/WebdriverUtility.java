@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -100,6 +101,7 @@ public class WebdriverUtility {
 		rt.keyRelease(KeyEvent.VK_DOWN);
 		rt.keyPress(KeyEvent.VK_ENTER);
 		rt.keyRelease(KeyEvent.VK_ENTER);
+		
 	}
 	public void sleep()
 	{
@@ -110,7 +112,7 @@ public class WebdriverUtility {
 			e.printStackTrace();
 		}
 	}
-	public void waitTillVissible(WebElement ele11) 
+	public void waitTillEleClickable(WebElement ele11) 
 	{
 		int count=0;
 		while(count<15)

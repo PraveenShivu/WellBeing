@@ -39,10 +39,6 @@ public class EncounterCreation {
 	}
 	public void Uhid(String value)
 	{
-<<<<<<< HEAD
-	
-=======
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
 		Uhid.sendKeys(value);
 	}
 	public void Search()
@@ -52,37 +48,32 @@ public class EncounterCreation {
 	}
 	public void COH()
 	{
-<<<<<<< HEAD
-		
-=======
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
 		COHID.click();
 	}
 	public void patientTypeDpdn(String text1) 
 	{		
-<<<<<<< HEAD
-		wd.waitTillVissible(patientType);	
-=======
+
+		
+
 		wd.waitTillEleClickable(patientType);
->>>>>>> branch 'master' of https://github.com/PraveenShivu/WellBeing.git
 		s=new Select(patientType);
 		s.selectByVisibleText(text1);		
 	}
 	public void deptDpdn(String text2)
 	{
-		wd.waitTillVissible(Department);
+		wd.waitTillEleClickable(Department);
 		s=new Select(Department);
 		s.selectByVisibleText(text2);
 	}
 	public void providerDpdn(String text3)
 	{
-		wd.waitTillVissible(Provider);
+		wd.waitTillEleClickable(Provider);
 		s=new Select(Provider);
 		s.selectByVisibleText(text3);
 	}
 	public void locDpdn(String text4)
 	{
-		wd.waitTillVissible(Location);
+		wd.waitTillEleClickable(Location);
 		s=new Select(Location);
 		s.selectByVisibleText(text4);
 	}
